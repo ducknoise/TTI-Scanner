@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="770.0" maxWidth="725.0" minHeight="500.0" minWidth="600.0" prefHeight="770.0" prefWidth="725.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ListView id="showNames" fx:id="namesList" layoutX="14.0" layoutY="70.0" onKeyPressed="#listClicked" onKeyReleased="#listClicked" onMouseClicked="#listClicked" onMousePressed="#listClicked" onMouseReleased="#listClicked" prefHeight="428.0" prefWidth="247.0" />
+    <TextField fx:id="searchBox" layoutX="13.0" layoutY="35.0" onKeyReleased="#search" prefHeight="26.0" prefWidth="236.0" />
+    <ImageView fx:id="imageView" fitHeight="229.5" fitWidth="306.0" layoutX="292.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+    <Button layoutX="20.0" layoutY="516.0" mnemonicParsing="false" onAction="#open" text="Print" />
+    <ImageView fitHeight="74.51411437988281" fitWidth="277.6631089227022" layoutX="0.0" layoutY="679.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@tti.png" />
+      </image>
+    </ImageView>
+    <Button layoutX="69.0" layoutY="515.0" mnemonicParsing="false" onAction="#saveInfo" prefHeight="22.0" prefWidth="56.1171875" text="Save" />
+    <MenuBar layoutX="0.0" layoutY="1.0" prefWidth="725.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Search And Sort By">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#searchAndSortBy" text="Full Name" fx:id="fullNameSearch" />
+            <MenuItem mnemonicParsing="false" onAction="#searchAndSortBy" text="Black List" fx:id="blackListSearch" />
+            <MenuItem mnemonicParsing="false" onAction="#searchAndSortBy" text="Check-In Date" fx:id="checkInDateSearch" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Button id="prevCIBut" fx:id="historyButton" layoutX="131.0" layoutY="513.0" mnemonicParsing="false" onAction="#checkins" prefHeight="26.0" prefWidth="123.0" text="Previous Checkins" />
+    <HBox layoutX="337.0" layoutY="291.0" prefHeight="457.0" prefWidth="298.0">
+      <children>
+        <VBox prefHeight="196.0" prefWidth="100.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+              <font>
+                <Font size="16.0" fx:id="x1" />
+              </font>
+            </Text>
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="State" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Type" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="DL Number" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Passport Number" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Date" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Expire Date" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Check In Date" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="BlackList (Y/N)" />
+            <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="*Reason" />
+          </children>
+        </VBox>
+        <VBox prefHeight="308.0" prefWidth="175.0">
+          <children>
+            <TextField fx:id="firstNameField" prefWidth="200.0" text="" />
+            <TextField fx:id="lastNameField" prefWidth="200.0" />
+            <TextField id="addressField" fx:id="sexField" prefWidth="200.0" />
+            <TextField fx:id="addressField" prefWidth="200.0" />
+            <TextField fx:id="cityField" prefWidth="200.0" />
+            <TextField fx:id="stateField" prefWidth="200.0" />
+            <TextField fx:id="zipField" prefWidth="200.0" />
+            <TextField fx:id="countryField" prefWidth="200.0" />
+            <TextField fx:id="idTypeField" prefWidth="200.0" />
+            <TextField fx:id="idField" prefWidth="200.0" />
+            <TextField fx:id="passportNumberField" prefWidth="200.0" />
+            <TextField fx:id="DOBField" prefWidth="200.0" />
+            <TextField fx:id="issueDateField" prefWidth="200.0" />
+            <TextField fx:id="expireField" prefWidth="200.0" />
+            <TextField fx:id="checkInDateField" prefWidth="200.0" />
+            <TextField fx:id="blackListField" onKeyPressed="#ynCheck" onKeyReleased="#ynCheck" onKeyTyped="#ynCheck" prefWidth="200.0" promptText="Y/N" />
+            <TextArea fx:id="reasonArea" prefHeight="81.5819091796875" prefWidth="175.0" wrapText="true" />
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+    <ToggleButton layoutX="138.0" layoutY="545.0" mnemonicParsing="false" onAction="#autoRefresh" text="Auto-Refresh" />
+    <Button layoutX="43.0" layoutY="546.0" mnemonicParsing="false" onAction="#refresh" prefWidth="72.7890625" text="Refresh" />
+  </children>
+</AnchorPane>

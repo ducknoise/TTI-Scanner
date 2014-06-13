@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.PrevCheckinsController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text fx:id="titleText" layoutX="20.0" layoutY="32.0" scaleX="1.0" scaleY="1.1911462157366617" strokeType="OUTSIDE" strokeWidth="0.0" text="has checked in on the following dates:">
+      <font>
+        <Font size="13.0" />
+      </font>
+    </Text>
+    <TextArea fx:id="historyArea" layoutX="36.0" layoutY="50.0" prefHeight="200.00009999999747" prefWidth="428.0" wrapText="true" />
+  </children>
+</AnchorPane>

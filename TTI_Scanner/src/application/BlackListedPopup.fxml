@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="715.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.BLPopupController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text fill="RED" layoutX="184.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WARNING!">
+      <font>
+        <Font size="60.0" />
+      </font>
+    </Text>
+    <Text fx:id="isBlacklisted" layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is BlackListed!">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Text>
+    <TextArea fx:id="reason" layoutX="184.0" layoutY="286.0" prefWidth="290.4111328125" wrapText="true" />
+    <Text layoutX="57.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason:">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Text>
+    <ImageView fx:id="faceView" fitHeight="137.691650390625" fitWidth="183.5888671875" layoutX="198.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
+  </children>
+</AnchorPane>

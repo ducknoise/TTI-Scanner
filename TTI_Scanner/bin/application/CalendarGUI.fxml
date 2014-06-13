@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="400.0" minWidth="500.0" onMouseEntered="#updateText" onMouseExited="#updateText" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.CalendarController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ChoiceBox fx:id="monthBox" layoutX="64.0" layoutY="68.0" onMouseClicked="#updateText" onMouseDragged="#updateText" onMouseEntered="#updateText" onMouseExited="#updateText" onMouseMoved="#updateText" onMousePressed="#updateText" onMouseReleased="#updateText">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Text layoutX="77.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Month">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="181.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day" />
+    <Text font="$x1" layoutX="266.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" />
+    <ChoiceBox fx:id="dayBox" layoutX="165.0" layoutY="69.0" onMouseClicked="#updateText" onMouseDragged="#updateText" onMouseEntered="#updateText" onMouseExited="#updateText" onMouseMoved="#updateText" onMousePressed="#updateText" onMouseReleased="#updateText">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="yearBox" layoutX="266.0" layoutY="68.0" onMouseClicked="#updateText" onMouseDragged="#updateText" onMouseEntered="#updateText" onMouseExited="#updateText" onMouseMoved="#updateText" onMousePressed="#updateText" onMouseReleased="#updateText">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button layoutX="339.0" layoutY="281.0" mnemonicParsing="false" onAction="#search" text="Search" />
+    <Text fx:id="dateText" layoutX="79.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+      <font>
+        <Font size="40.0" />
+      </font>
+    </Text>
+  </children>
+</AnchorPane>
