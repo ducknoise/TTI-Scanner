@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="770.0" maxWidth="725.0" minHeight="500.0" minWidth="600.0" prefHeight="770.0" prefWidth="725.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
+<AnchorPane maxHeight="770.0" maxWidth="725.0" minHeight="500.0" minWidth="600.0" prefHeight="770.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <!-- TODO Add Nodes -->
   <children>
     <ListView id="showNames" fx:id="namesList" layoutX="14.0" layoutY="70.0" onKeyPressed="#listClicked" onKeyReleased="#listClicked" onMouseClicked="#listClicked" onMousePressed="#listClicked" onMouseReleased="#listClicked" prefHeight="428.0" prefWidth="247.0" />
@@ -24,9 +24,9 @@
       <menus>
         <Menu mnemonicParsing="false" text="Search And Sort By">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#searchAndSortBy" text="Full Name" fx:id="fullNameSearch" />
-            <MenuItem mnemonicParsing="false" onAction="#searchAndSortBy" text="Black List" fx:id="blackListSearch" />
-            <MenuItem mnemonicParsing="false" onAction="#searchAndSortBy" text="Check-In Date" fx:id="checkInDateSearch" />
+            <MenuItem fx:id="fullNameSearch" mnemonicParsing="false" onAction="#searchAndSortBy" text="Full Name" />
+            <MenuItem fx:id="blackListSearch" mnemonicParsing="false" onAction="#searchAndSortBy" text="Black List" />
+            <MenuItem fx:id="checkInDateSearch" mnemonicParsing="false" onAction="#searchAndSortBy" text="Check-In Date" />
           </items>
         </Menu>
       </menus>
@@ -82,7 +82,7 @@
         </VBox>
       </children>
     </HBox>
-    <ToggleButton layoutX="138.0" layoutY="545.0" mnemonicParsing="false" onAction="#autoRefresh" text="Auto-Refresh" />
+    <ToggleButton fx:id="autoRefBut" layoutX="138.0" layoutY="545.0" mnemonicParsing="false" onAction="#autoRefresh" text="Auto-Refresh" />
     <Button layoutX="43.0" layoutY="546.0" mnemonicParsing="false" onAction="#refresh" prefWidth="72.7890625" text="Refresh" />
   </children>
 </AnchorPane>

@@ -65,6 +65,7 @@ implements Initializable
 	@FXML TextArea reasonArea;
 	@FXML TextField checkInDateField;
 	@FXML Button historyButton;
+	@FXML ToggleButton autoRefBut;
 	ObservableList<Scannable> items;
 	Timer timer;
 	int index  =-1;
@@ -74,6 +75,8 @@ implements Initializable
 		setScannables();
 		Global.mainContoller = this;
 		refresh();
+		autoRefBut.arm();
+		
 		
 	}
 
