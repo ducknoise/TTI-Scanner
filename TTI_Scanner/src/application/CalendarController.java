@@ -89,11 +89,12 @@ public class CalendarController implements Initializable {
 	}
 	private String getDay(){
 		String day = dayBox.getSelectionModel().getSelectedItem();
+		if(day!= null && Integer.valueOf(day) < 10)
+			day = "0"+day;
 		if(day!=null)
 			return "/"+day;
-		else {
+		else 
 			return "";
-		}
 	}
 	private String getYear(){
 		String year = yearBox.getSelectionModel().getSelectedItem();
