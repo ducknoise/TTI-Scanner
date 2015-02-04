@@ -1,0 +1,10 @@
+1. Resize sucks....
+3. Auto-refresh needs to be the default when opening
+4. when you show the message about black list it needs to be in focus at the front, now its stays in the task bar blinking
+5. delete option - from to by date and individual
+7. Can you add a note area like the black list but just text?
+8. Previous check-ins - the list is "weird"
+
+FIXED
+2. It won't pick the sex from the XML
+6. When moving the xml to the archive do not change name, if the db is damaged I cannot recreate
